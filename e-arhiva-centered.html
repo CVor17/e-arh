@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Arhiva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://via.placeholder.com/1500x1000.png?text=e-Arhiva+Background');
+            background-size: cover;
+            background-position: center;
+        }
+        #welcome-container, #login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        a, button {
+            text-decoration: none;
+            color: white;
+            background: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a:hover, button:hover {
+            background: #0056b3;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome-container">
+        <h1>Dobrodošli u e-Arhivu</h1>
+        <a href="#" onclick="showLoginPage()">Kliknite ovdje za prijavu</a>
+    </div>
+
+    <div id="login-container" style="display: none;">
+        <h1>Prijava u sustav</h1>
+        <input type="email" placeholder="Unesite e-mail">
+        <input type="password" placeholder="Unesite lozinku">
+        <button onclick="alert('Prijavljeni ste!')">Prijava</button>
+    </div>
+
+    <script>
+        function showLoginPage() {
+            document.getElementById('welcome-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
